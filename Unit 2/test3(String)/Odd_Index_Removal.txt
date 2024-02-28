@@ -1,0 +1,19 @@
+package q23058;
+import java.util.Scanner;
+public class OddIndexRemoval {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        String simplifiedString = removeOddIndices(inputString);
+        System.out.println(simplifiedString);
+    }
+    private static String removeOddIndices(String inputString) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < inputString.length(); i++) {
+            if (i % 2 == 0) {
+                result.append(inputString.charAt(i));
+            }
+        }
+        return result.toString();
+    }
+}

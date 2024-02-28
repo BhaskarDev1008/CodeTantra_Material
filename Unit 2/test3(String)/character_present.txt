@@ -1,0 +1,21 @@
+package q22790;
+import java.util.Scanner;
+public class CharacterSearch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        char character = scanner.next().charAt(0);
+        int index = -1;
+        for (int i = 0; i < inputString.length(); i++) {
+            if (inputString.charAt(i) == character) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1) {
+            System.out.println(index);
+        } else {
+            System.out.println("Not found");
+        }
+    }
+}

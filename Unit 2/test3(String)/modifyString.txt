@@ -1,0 +1,11 @@
+package q22830;
+import java.util.Scanner;
+public class ModifyString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        int mid = inputString.length() / 2;
+        String outputString = inputString.substring(0, mid).toLowerCase()+ inputString.substring(mid).toUpperCase();
+        System.out.println(outputString);
+    }
+}

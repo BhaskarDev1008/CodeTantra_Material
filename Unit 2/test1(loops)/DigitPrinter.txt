@@ -1,0 +1,16 @@
+public class DigitPrinter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+        if (n < 0) {
+            System.out.pritnln("Enter a non-negative integer);
+            rerurn;
+        }
+        for (int num = n, i = 1; num != 0; num /= 10, i++) {
+            if (i % 2 != 0) {
+                System.out.print(num % 10);
+            }
+        }
+    }
+}

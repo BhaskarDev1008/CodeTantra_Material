@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class CTJ14112 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Reading input
+        int N = scanner.nextInt(); // Size of the list
+        int M = scanner.nextInt(); // Number of queries
+        int[][] queries = new int[M][3];
+        // Reading queries
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < 3; j++) {
+                queries[i][j] = scanner.nextInt();
+            }
+        }
+        // Calculating maximum after queries
+        int result = maxAfterQueries(N, M, queries);
+        System.out.println(result);
+        scanner.close();
+    }
+    public static int maxAfterQueries(int N, int M, int[][] queries) {
+        int[] arr = new int[N];
+        for (int[] query : queries) {
+            int A = query[0];
+            int B = query[1];
+            int V = query[2];
+            for (int i = A - 1; i <= B - 1; i++) {
+                arr[i] += V;
+            }
+        }
+        // Finding maximum value in the array
+        int max = Integer.MIN_VALUE;
+        for (int num : arr) {
+            if (num > max) {
+                max = num;
+            }
+        }
+        return max;
+    }
+}

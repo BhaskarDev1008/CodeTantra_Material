@@ -1,0 +1,10 @@
+package q22791;
+import java.util.Scanner;
+public class ToUpperCase{
+    public static void main(String[] args) {
+        Scanner scan =  new Scanner (System.in);
+        String in = scan.nextLine();
+        String modified = in.ToUpperCase();
+        System.out.println(modified);
+    }
+}

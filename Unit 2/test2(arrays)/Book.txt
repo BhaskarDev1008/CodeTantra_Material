@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Book {
+    private String title;
+    private int publicationYear;
+
+    // Constructor
+    public Book() {
+        // Default constructor
+    }
+
+    // Getter method for title
+    public String getTitle() {
+        return title;
+    }
+
+    // Getter method for publication year
+    public int getPublicationYear() {
+        return publicationYear;
+    }
+
+    // Setter method for title
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    // Setter method for publication year
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Book libraryBook = new Book();
+
+        
+    }
+}

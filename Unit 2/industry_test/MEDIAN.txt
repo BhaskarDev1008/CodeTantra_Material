@@ -1,0 +1,33 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class CTJ17190 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Read input
+        String input = scanner.nextLine();
+        String[] numbersStr = input.split(" ");
+        double[] numbers = new double[numbersStr.length];
+        // Convert strings to doubles
+        for (int i = 0; i < numbersStr.length; i++) {
+            numbers[i] = Double.parseDouble(numbersStr[i]);
+        }
+        // Calculate median
+        double median = calculateMedian(numbers);
+        System.out.println(median);
+        scanner.close();
+    }
+    public static double calculateMedian(double[] numbers) {
+        Arrays.sort(numbers);
+        int length = numbers.length;
+        if (length % 2 == 0) {
+            // If the length is even, average the two middle elements
+            int midIndex1 = length / 2 - 1;
+            int midIndex2 = length / 2;
+            return (numbers[midIndex1] + numbers[midIndex2]) / 2.0;
+        } else {
+            // If the length is odd, return the middle element
+            int midIndex = length / 2;
+            return numbers[midIndex];
+        }
+    }
+}

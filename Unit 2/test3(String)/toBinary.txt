@@ -1,0 +1,20 @@
+package q22829;
+import java.util.Scanner;
+public class BCDConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        String bcdRepresentation = convertToBCD(number);
+        System.out.println("BCD representation: " + bcdRepresentation);
+    }
+    private static String convertToBCD(int number) {
+        StringBuilder bcd = new StringBuilder();
+        while (number != 0) {
+            int digit = number % 10;
+            String bcdDigit = String.format("%04d", Integer.parseInt(Integer.toBinaryString(digit)));
+            bcd.insert(0, bcdDigit);
+            number /= 10;
+        }
+        return bcd.toString();
+    }
+}

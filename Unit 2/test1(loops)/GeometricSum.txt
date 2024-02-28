@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int n = scanner.nextInt();
+    scanner.close();  
+    double result = geometricSum(n);
+    System.out.printf("%.6f\n", result);
+}
+public static double geometricSum(int n) {
+    if (n == 0) {
+        return 0; // Base case: when n is 0, return 1
+    } else {
+        return 1.0 / (n*n) + geometricSum(n - 1);
+    }
+}
