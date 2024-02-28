@@ -30,7 +30,7 @@ This Python script provides automation for inputting text from a specified file 
 ### Example Usage:
 
 ```python
-python automated_text_input.py
+python script.py
 ```
 
 ### Dependencies:
