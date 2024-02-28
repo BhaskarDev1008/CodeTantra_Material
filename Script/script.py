@@ -41,7 +41,7 @@ def input_text_from_file(file_path):
 
 if __name__ == "__main__":
     # Construct the full file path
-    file_path = r"<enter file path"
+    file_path = r"<enter file path>"
     
     while True:
         clear_text_at_cursor()
