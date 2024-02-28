@@ -6,7 +6,7 @@ This Python script provides automation for inputting text from a specified file 
 
 - **Clear Text at Cursor:** The script allows users to clear text at the current cursor position by positioning the mouse cursor over the desired text and executing the script.
   
-- **Automated Text Input:** Text from a specified file can be automatically inputted into the active text editor or application, character by character.
+- **Automated Text Input:** Text from a specified file can be automatically inputted into the active text editor or application, character by character. The script pauses when encountering "\" characters in the input file, requiring the user to press Enter first to clear the text then again press Enter to resume inputting text.
 
 ### How to Use:
 
