@@ -1,0 +1,44 @@
+package q22939;
+// change the answer provided by codeTantra
+public class Book {
+    private String title;
+    private int publicationYear;
+    // Constructor
+    public Book(String title, int publicationYear) {
+        this.title = title;
+        this.publicationYear = publicationYear;
+    }
+    // Getter and setter methods
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public int getPublicationYear() {
+        return publicationYear;
+    }
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for book details
+        System.out.print("Title of the book: ");
+        String userEnteredTitle = scanner.nextLine();
+
+        System.out.print("Publication year of the book: ");
+        int userEnteredYear = scanner.nextInt();
+
+        // Create a Book object
+        Book libraryBook = new Book(userEnteredTitle, userEnteredYear);
+
+        // Display book details
+        System.out.println("Details of the Library Book:");
+        System.out.println("Title: " + libraryBook.getTitle());
+        System.out.println("Publication Year: " + libraryBook.getPublicationYear());
+
+        scanner.close();
+    }
+}

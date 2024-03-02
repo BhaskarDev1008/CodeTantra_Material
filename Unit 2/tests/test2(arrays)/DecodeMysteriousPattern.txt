@@ -1,0 +1,8 @@
+public class DecodeMysteriousPattern {
+    private static int[] decodeMysteriousPattern(int[] numbers) {
+        int[] decodedNumbers = new int[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+            decodedNumbers[i] = numbers[i] * (i + 1);
+        }
+        return decodedNumbers;
+    }

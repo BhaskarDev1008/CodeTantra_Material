@@ -1,0 +1,8 @@
+public class ExamScoreAnalyzer {
+    public static double calculateAverageScore(int[] examScores) {
+        int sum = 0;
+        for (int score : examScores) {
+            sum += score;
+        }
+        return (double) sum / examScores.length;
+    }

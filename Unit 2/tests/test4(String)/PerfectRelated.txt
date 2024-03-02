@@ -1,0 +1,33 @@
+import java.util.Arrays;
+public class PerfectRelated {
+    public static boolean areStringsRelated(String str1, String str2) {
+        // Convert strings to character arrays
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray(); 
+        // Convert characters to lowercase to ignore case sensitivity
+        for (int i = 0; i < charArray1.length; i++) {
+            charArray1[i] = Character.toLowerCase(charArray1[i]);
+        }
+        for (int i = 0; i < charArray2.length; i++) {
+            charArray2[i] = Character.toLowerCase(charArray2[i]);
+        } 
+        // Sort the character arrays
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);    
+        // Check if the sorted arrays are equal
+        return Arrays.equals(charArray1, charArray2);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Read input strings
+        String str1 = scanner.nextLine();
+        String str2 = scanner.nextLine();
+        // Check if the strings are related
+        if (areStringsRelated(str1, str2)) {
+            System.out.println(str1.toLowerCase() + " and " + str2.toLowerCase() + " are Related");
+        } else {
+            System.out.println(str1.toLowerCase() + " and " + str2.toLowerCase() + " are not Related");
+        }
+        scanner.close();
+    }
+}

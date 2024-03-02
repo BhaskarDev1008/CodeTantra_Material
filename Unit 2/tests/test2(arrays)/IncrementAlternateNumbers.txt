@@ -1,0 +1,7 @@
+public class IncrementAlternateNumbers {
+    private static int[] incrementAlternateNumbers(int[] numbers) {
+        for (int i = 1; i < numbers.length; i += 2) {
+            numbers[i] -= 2;
+        }
+        return numbers;
+    }

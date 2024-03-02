@@ -1,0 +1,10 @@
+public class EntertainmentExpenseTracker {
+    public static double calculateTotalExpenses(double[] expenses) {
+        double totalExpenses = 0;
+        for (double expense : expenses) {
+            totalExpenses += expense;
+        }
+        return totalExpenses;
+    }
+
+}

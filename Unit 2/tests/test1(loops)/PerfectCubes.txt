@@ -1,0 +1,11 @@
+public class PerfectCubes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 1; i * i * i <= n; i++) {
+            int cube = i * i * i;
+            System.out.print(cube+" ");
+        }
+        scanner.close();
+    }
+}

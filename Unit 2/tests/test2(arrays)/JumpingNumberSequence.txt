@@ -1,0 +1,10 @@
+public class JumpingNumberSequence {
+    private static int[] createJumpingSequence(int[] numbers) {
+        int[] jumpingSequence = new int[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+            jumpingSequence[i] = numbers[i] + i;
+        }
+        return jumpingSequence;
+    }
+
+    

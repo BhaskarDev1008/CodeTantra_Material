@@ -1,0 +1,10 @@
+public class ReverseNumbersInSequence {
+    private static int[] reverseNumbers(int[] numbers) {
+        int[] reversedNumbers = new int[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+            reversedNumbers[i] = numbers[numbers.length - 1 - i];
+        }
+        return reversedNumbers;
+    }
+
+}

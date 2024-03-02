@@ -1,0 +1,63 @@
+package q22853;
+class Agent {
+    // Attributes
+    String name;
+    int age;
+    String codename;
+    boolean isUndercover;
+    String assignment;
+    String specialty;
+
+    // Method to introduce the agent
+    void introduce() {
+        System.out.println("Hello, I am Agent " + codename + ".");
+        System.out.println("My real name is " + name + ".");
+        System.out.println("I am " + age + " years old.");
+        System.out.println("Currently, I am undercover: " + isUndercover);
+        System.out.println("My current assignment is: " + assignment);
+    }
+
+    // Method to display the agent's specialty
+    void displaySpecialty() {
+        System.out.println("My specialty is: " + specialty);
+    }
+}
+
+public class SpySystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Create an instance of Agent
+        Agent topSpecialAgent = new Agent();
+
+        // Prompt user to input agent details
+        System.out.print("Enter the real name of the agent: ");
+        topSpecialAgent.name = scanner.nextLine();
+
+        System.out.print("Enter the age of the agent: ");
+        topSpecialAgent.age = scanner.nextInt();
+        scanner.nextLine(); // Consume newline character
+
+        System.out.print("Enter the codename of the agent: ");
+        topSpecialAgent.codename = scanner.nextLine();
+
+        System.out.print("Is the agent currently undercover? (true/false): ");
+        topSpecialAgent.isUndercover = scanner.nextBoolean();
+        scanner.nextLine(); // Consume newline character
+
+        System.out.print("Enter the current assignment of the agent: ");
+        topSpecialAgent.assignment = scanner.nextLine();
+
+        System.out.print("Enter the specialty of the agent: ");
+        topSpecialAgent.specialty = scanner.nextLine();
+
+        // Introducing the topSpecialAgent
+        topSpecialAgent.introduce();
+
+        // Displaying the specialty of the topSpecialAgent
+        topSpecialAgent.displaySpecialty();
+
+        // Close the scanner
+        scanner.close();
+    }
+}

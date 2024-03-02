@@ -1,0 +1,37 @@
+public class RemoveDuplicates {
+    public static String removeDuplicates(String str) {
+        StringBuilder result = new StringBuilder();
+        // Iterate through each character in the string
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            boolean isDuplicate = false;
+
+            // Check if the character is a duplicate
+            for (int j = 0; j < i; j++) {
+                if (str.charAt(j) == c) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            // Add the character to the result if it's not a duplicate
+            if (!isDuplicate) {
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read input string
+        String inputString = scanner.nextLine();
+
+        // Remove duplicates
+        String result = removeDuplicates(inputString);
+
+        // Output the result
+        System.out.println(result);
+
+        scanner.close();
+    }
+}

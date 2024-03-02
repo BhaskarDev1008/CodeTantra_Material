@@ -1,0 +1,91 @@
+package q22920;
+class Agent {
+    String name;
+    int age;
+    String codename;
+    boolean isUndercover;
+    String assignment;
+    String specialty;
+
+    // Variable to keep track of the total number of agents
+    private static int totalAgents = 0;
+
+    private static int totalAge = 0; // New variable for calculating total age
+
+    // Constructor
+    public Agent(String name, int age, String codename, boolean isUndercover, String assignment, String specialty){
+        this.name = name;
+        this.age = age;
+        this.codename = codename;
+        this.isUndercover = isUndercover;
+        this.assignment = assignment;
+        this.specialty = specialty;
+
+        // Increment the count of total agents and add age for calculating average age
+        totalAgents++;
+        totalAge += age;
+    }
+
+    // Method to introduce the agent
+    void introduce() {
+        System.out.println("Hello, I am Agent " + codename + ".");
+        System.out.println("My real name is " + name + ".");
+        System.out.println("I am " + age + " years old.");
+        System.out.println("Currently, I am undercover: " + isUndercover);
+        System.out.println("My current assignment is: " + assignment);
+        System.out.println("My specialty is: " + specialty);
+    }
+
+    // Class method to display the average age of all agents
+    static void displayAverageAge() {
+        if (totalAgents == 0) {
+            System.out.println("No agents to calculate average age.");
+        } else {
+            double averageAge = (double) totalAge / totalAgents;
+            System.out.println("Average Age of Agents: " + averageAge);
+        }
+    }
+}
+
+public class SpySystem {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Getting the number of agents to be created
+        System.out.print("Enter the number of agents to create: ");
+        int numberOfAgents = scanner.nextInt();
+        scanner.nextLine(); // consume the newline character
+
+        // Creating agents based on user input
+        for (int i = 1; i <= numberOfAgents; i++) {
+            System.out.println("Enter details for Agent " + i + ":");
+            System.out.print("Enter the real name: ");
+            String name = scanner.nextLine();
+            System.out.print("Enter the age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine(); // consume the newline character
+            System.out.print("Enter the codename: ");
+            String codename = scanner.nextLine();
+            System.out.print("Is the agent currently undercover? (true/false): ");
+            boolean isUndercover = scanner.nextBoolean();
+            scanner.nextLine(); // consume the newline character
+            System.out.print("Enter the current assignment: ");
+            String assignment = scanner.nextLine();
+            System.out.print("Enter the specialty: ");
+            String specialty = scanner.nextLine();
+
+            // Create Agent
+            Agent agent = new Agent(name, age, codename, isUndercover, assignment, specialty);
+
+            // Introduce the agent
+            agent.introduce();
+        }
+
+        // Display average age
+        Agent.displayAverageAge();
+
+        // Closing the scanner
+        scanner.close();
+    }
+}

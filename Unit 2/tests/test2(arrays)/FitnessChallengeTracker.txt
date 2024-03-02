@@ -1,0 +1,9 @@
+public class FitnessChallengeTracker {
+    public static int calculateTotalSteps(int[] weeklySteps) {
+        int totalSteps = 0;
+        for (int step : weeklySteps) {
+            totalSteps += step;
+        }
+        return totalSteps;
+    }
+}

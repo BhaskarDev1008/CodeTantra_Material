@@ -1,0 +1,43 @@
+public class WeatherAdventureAnalyzer {
+    private static int[] dailyTemperatures = new int[7];
+    public static int findHighestTemperature() {
+        int maxTemp = dailyTemperatures[0];
+        for (int temp : dailyTemperatures) {
+            if (temp > maxTemp) {
+                maxTemp = temp;
+            }
+        }
+        return maxTemp;
+    }
+    public static int findLowestTemperature() {
+        int minTemp = dailyTemperatures[0];
+        for (int temp : dailyTemperatures) {
+            if (temp < minTemp) {
+                minTemp = temp;
+            }
+        }
+        return minTemp;
+    }
+    public static double calculateAverageTemperature() {
+        int sum = 0;
+        for (int temp : dailyTemperatures) {
+            sum += temp;
+        }
+        return (double) sum / dailyTemperatures.length;
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < dailyTemperatures.length; i++) {
+            System.out.print("Enter the temperature for Day " + (i + 1) + ": ");
+            dailyTemperatures[i] = scanner.nextInt();
+        }
+        int highestTemperature = findHighestTemperature();
+        int lowestTemperature = findLowestTemperature();
+        double averageTemperature = calculateAverageTemperature();
+        System.out.println("Highest: " + highestTemperature + " degrees Celsius");
+        System.out.println("Lowest: " + lowestTemperature + " degrees Celsius");
+        System.out.println("Average: " + averageTemperature + " degrees Celsius");
+        scanner.close();
+    }
+}

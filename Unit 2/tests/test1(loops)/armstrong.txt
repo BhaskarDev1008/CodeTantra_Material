@@ -9,6 +9,6 @@ public class ArmstrongNumber {
             result += Math.pow(digit, n);
             originalNumber /= 10;
         }
-        System.out.println(number + (result == number ? " is an Armstrong number." : " is not an Armstrong number."));
+        System.out.println(number + (result == number ? " is an Armstrong number" : " is not an Armstrong number"));
     }
 }

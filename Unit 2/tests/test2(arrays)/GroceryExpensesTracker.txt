@@ -1,0 +1,9 @@
+public class GroceryExpensesTracker {
+    public static double calculateTotalExpenses(double[] expenses) {
+        double total = 0;
+        for (double expense : expenses) {
+            total += expense;
+        }
+        return total;
+    }
+}
