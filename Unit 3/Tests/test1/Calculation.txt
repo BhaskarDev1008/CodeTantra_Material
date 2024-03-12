@@ -1,0 +1,19 @@
+class Calculation {
+    int num1;
+    int num2;
+    Calculation(int num1, int num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    int addition() {
+        return num1 + num2;
+    }
+}
+class My_Calculation extends Calculation {
+    My_Calculation(int num1, int num2) {
+        super(num1, num2);
+    }
+    int multiplication() {
+        return num1 * num2;
+ 
+\\

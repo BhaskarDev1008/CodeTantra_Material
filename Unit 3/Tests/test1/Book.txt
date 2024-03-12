@@ -1,0 +1,20 @@
+class Book {
+    String title;
+    void inputTitle() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter book title: ");
+        title = scanner.nextLine();
+    }
+}
+class Novel extends Book {
+    String genre;
+    void inputGenre() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter genre: ");
+        genre = scanner.nextLine();
+    }
+    void inputNovelDetails() {
+        inputTitle();
+        inputGenre();
+
+\\

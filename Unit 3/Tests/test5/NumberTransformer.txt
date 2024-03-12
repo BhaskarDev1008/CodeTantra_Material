@@ -1,0 +1,19 @@
+//dummytext
+//dummytext
+interface NumberTransformer {
+    void transform(int number);
+}
+class SquareTransformer implements NumberTransformer {
+    @Override
+    public void transform(int number) {
+        int square = number * number;
+        System.out.println("Square: " + square);
+    }
+}
+class CubeTransformer implements NumberTransformer {
+    @Override
+    public void transform(int number) {
+        int cube = number * number * number;
+        System.out.println("Cube: " + cube);
+
+\\

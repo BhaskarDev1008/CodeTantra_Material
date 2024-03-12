@@ -1,0 +1,28 @@
+// dummytext
+class Product {
+    String productName;
+    double price;
+    int quantity;
+    public Product(String productName, double price, int quantity) {
+        this.productName = productName;
+        this.price = price;
+        this.quantity = quantity;
+    }
+    public void displayInfo() {
+        System.out.println("Product Name: " + productName);
+        System.out.println("Price: $" + price);
+        System.out.println("Quantity: " + quantity);
+    }
+}
+class ElectronicProduct extends Product {
+    int warrantyPeriod;
+    public ElectronicProduct(String productName, double price, int quantity, int warrantyPeriod) {
+        super(productName, price, quantity);
+        this.warrantyPeriod = warrantyPeriod;
+    }
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Warranty Period: " + warrantyPeriod + " months");
+
+\\

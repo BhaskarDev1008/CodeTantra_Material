@@ -1,0 +1,14 @@
+class NumberIn {
+    int num;
+    void inputNum() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        num = scanner.nextInt();
+    }
+}
+class CubeOut extends NumberIn {
+    void displayCube() {
+        int cube = num * num * num;
+        System.out.println(cube);
+
+\\

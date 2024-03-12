@@ -1,0 +1,565 @@
+// demo text
+
+public class SingleInheritanceDemo {
+	int id;
+	float javaMarks;
+	float cMarks;
+	float cppMarks;
+	public static void main(String[] args){
+		int id = Integer.parseInt(args[0]);
+		float jM = Float.parseFloat(args[1]);
+		float cM = Float.parseFloat(args[2]);
+		float cppM = Float.parseFloat(args[3]);
+		Result obj = new Result();
+		obj.setMarks(id,jM,cM,cppM);
+		obj.displayMarks();
+		obj.compute();
+		obj.showResult();
+	}
+}
+class Marks{
+	int id;
+	float javaMarks;
+	float cMarks;
+	float cppMarks;
+	public void setMarks(int id,float javaMarks,float cMarks , float cppMarks){
+		this.id = id;
+		this.javaMarks = javaMarks;
+		this.cMarks = cMarks;
+		this.cppMarks = cppMarks;
+	}
+	public void displayMarks(){
+		System.out.println("Id : "+id);
+		System.out.println("Java marks : "+javaMarks);
+		System.out.println("C marks : "+cMarks);
+		System.out.println("Cpp marks : "+cppMarks);
+	}
+}
+class Result extends Marks{
+	float total,avg;
+	public void compute(){
+		total = javaMarks + cMarks + cppMarks;
+		avg = total/3;
+	}
+	public void showResult(){
+		System.out.println("Total : "+total);
+		System.out.println("Avg : "+avg);
+	
+
+\\
+
+package q11264;
+public class MultilevelInheritanceDemo {
+	int id;
+	float javaMarks;
+	float cMarks;
+	float cppMarks;
+	public static void main(String[] args){
+		int id = Integer.parseInt(args[0]);
+		float jM = Float.parseFloat(args[2]);
+		float cM = Float.parseFloat(args[3]);
+		float cppM = Float.parseFloat(args[4]);
+		Result obj = new Result();
+		obj.setData(id,args[1]);
+		obj.setMarks(jM,cM,cppM);
+		obj.displayData();
+		obj.displayMarks();
+		obj.compute();
+		obj.showResult();
+	}
+}
+class Student {
+	int id;
+	String name;
+	public void setData(int id,String name){
+		this.id=id;
+		this.name = name;
+	}
+	public void displayData(){
+		System.out.println("Id : "+id);
+		System.out.println("Name : "+name);
+	}
+}
+class Marks extends Student{
+	float javaMarks;
+	float cMarks;
+	float cppMarks;
+	public void setMarks(float javaMarks,float cMarks , float cppMarks){	
+		this.javaMarks = javaMarks;
+		this.cMarks = cMarks;
+		this.cppMarks = cppMarks;
+	}
+	public void displayMarks(){	
+		System.out.println("Java marks : "+javaMarks);
+		System.out.println("C marks : "+cMarks);
+		System.out.println("Cpp marks : "+cppMarks);
+	}
+}
+class Result extends Marks{
+	float total,avg;
+	public void compute(){
+		total = javaMarks + cMarks + cppMarks;
+		avg = total/3;
+	}
+	public void showResult(){
+		System.out.println("Total : "+total);
+		System.out.println("Avg : "+avg);
+
+
+\\
+
+
+package q11266;
+public class Addition {
+	static void add(int x,int y){
+		System.out.println("Sum of "+x+" and "+y+" : "+(x+y));
+	}
+	static void add(int x,float y){
+		System.out.println("Sum of "+x+" and "+y+" : "+(x+y));
+	}
+	static void add(float x,float y){
+		System.out.println("Sum of "+x+" and "+y+" : "+(x+y));
+	}
+	static void add(float x,double y, double z){
+		System.out.println("Sum of "+x+", "+y+" and "+z+" : "+(x+y+z));
+	}
+	public static void main(String[] args){
+		int a = Integer.parseInt(args[0]);
+		int b = Integer.parseInt(args[1]);
+		Float c = Float.parseFloat(args[2]);
+		Float d = Float.parseFloat(args[3]);
+		double e = Double.parseDouble(args[4]);
+		double f = Double.parseDouble(args[5]);
+		add(a,b);
+		add(c,d);
+		add(b,d);
+		add(c,e,f);
+
+\\
+
+
+// dummy text
+
+package q11267;
+public class Box{
+	double width , height , depth;
+	Box(){
+		width = -1;
+		height = -1;
+		depth = -1;
+	}	
+	Box(double L){
+		width = L;
+		height = L;
+		depth = L;
+	}	
+	Box(double w ,double h , double d){
+		width = w;
+		height = h;
+		depth = d;
+	}	
+	public double volume(){
+		return width*height*depth;
+	}	
+	public static void main(String...args){
+		double a,b,c;
+		if(args.length==0){
+			Box obj = new Box();
+			System.out.println("Volume of Box() is : "+obj.volume());
+		}
+		if(args.length==1){
+			a = Double.parseDouble(args[0]);
+			Box obj = new Box(a);
+			System.out.println("Volume of Box("+a+") is : "+obj.volume());
+		} 
+		else if(args.length==3){
+			
+			a = Double.parseDouble(args[0]);
+			b = Double.parseDouble(args[1]);
+			c = Double.parseDouble(args[2]);
+			Box obj = new Box(a,b,c);
+			System.out.println("Volume of Box("+a+", "+b+", "+c+")"+" is : "+obj.volume());
+
+\\
+
+
+package q11268;
+public class OverloadArea {
+	static float area(float a){
+		return a*a;
+	}
+	static float area(float a,float b){
+		return a*b;
+	}
+	public static void main (String[] args) {
+		Float f1 = Float.parseFloat(args[0]);
+		Float f2 = Float.parseFloat(args[1]);
+		System.out.println("Area of square for side in meters " + f1 + " : " +area(f1) ); // Fill in the missing code
+		System.out.println("Area of rectangle for length and breadth in meters " + f1 + ", " + f2 + " : " +area(f1,f2) );
+
+\\
+
+
+// dummy text
+
+class B extends A {
+	public int bValue;
+	public int getBValue() {
+		return bValue;
+	}
+	public int getAValue() {
+		return 2 * (super.aValue);
+	
+\\
+
+  // dummytext
+
+
+class SBI extends Bank {
+	private static final float INTEREST_RATE = 10.8f;
+	public float calculateInterest (float principal, int time) {
+		return (principal*INTEREST_RATE*time)/100;
+
+\\
+
+// dummy text
+class ICICI extends Bank {
+	private static final float INTEREST_RATE = 11.6f;
+	public float calculateInterest (float principal, int time) {
+		return (principal*INTEREST_RATE*time)/100;
+
+\\
+
+// dummytext
+
+class AXIS extends Bank {
+	private static final float INTEREST_RATE = 12.3f;
+	public float calculateInterest (float principal, int time) {
+		return (principal*INTEREST_RATE*time)/100;
+
+\\
+
+
+class SubClass extends SuperClass {
+	SubClass(int value) {
+		super(value);
+	}
+public void printHello() {
+	System.out.println("SuperClass number = " + num);
+	System.out.println("SubClass number = " + 15);
+	super.printHello();
+	System.out.println("Hello from SubClass");
+
+\\
+
+package q11273;
+class Animal {
+	public Animal() {
+		System.out.println("Animal is created");
+		
+	}
+	void eat() {
+		System.out.println("Eating something");
+		
+	}  
+}  
+class Dog extends Animal { 
+	public Dog() {
+		System.out.println("Dog is created");
+		
+		
+	}
+	void eat() {
+		System.out.println("Eating bread");
+		
+	}
+	void bark() {
+		System.out.println("Barking");
+		
+	}  
+	void work() {  
+		super.eat();
+		eat();
+		bark();
+		
+	}  
+}  
+public class ExampleOnSuper { 
+	public static void main(String args[]) {
+		Dog d = new Dog();  
+		d.work();  
+
+
+\\
+
+//dummytext
+SuperClass(int v1,int v2){
+		value1=v1;
+		value2=v2;
+	}
+	public void show(){
+		System.out.println("This is super class show() method");
+		System.out.println("value1 = "+value1);
+
+\\
+
+//dummytext
+SubClass(int v1,int v2,int v3,int v4){
+		super(v1,v2);
+		value3 = v3;
+		value4 = v4;
+	}
+	public void show(){
+		System.out.println("This is sub class show() method");
+		super.show();
+		System.out.println("value2 from super class = "+value2);
+		System.out.println("value3 = "+value3);
+		System.out.println("value4 = "+value4);
+
+\\
+
+
+
+// dummytext
+
+Object a = new A();
+Object b = new B();
+Object c = new C();
+
+\\
+
+class Animal{
+	public void whoAmI(){
+		System.out.println("I am a generic animal");
+	}
+}
+class Dog extends Animal{
+	public void whoAmI(){
+		System.out.println("I am a dog");
+	}
+}
+class Cow extends Animal{
+	public void whoAmI(){
+		System.out.println("I am a cow");
+	}
+}
+class Snake extends Animal{
+	public void whoAmI(){
+		System.out.println("I am a snake");
+
+
+\\
+
+//dummytext
+
+private int value;
+	public A(int value) {
+		this.value = value;
+	}
+	public String toString() {
+		return "The value is : " + value;
+
+\\
+
+//dummytext
+A a1 = new A(a_1);
+A a2 = new A(a_2);
+A a3 = new A(a_3);
+System.out.println("a1.equals(a2) : " + a1.equals(a2));
+System.out.println("a1.equals(a3) : " + a1.equals(a3));
+\\
+
+//dummytext
+B b1 = new B(b_1);
+B b2 = new B(b_2);
+B b3 = new B(b_3);
+System.out.println("b1.equals(b2) : " + b1.equals(b2));
+System.out.println("b1.equals(b3) : " + b1.equals(b3));
+\\
+
+//dummytext
+public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof A)) {
+			return false;
+		A obj1 = (A) obj;
+		return this.value==obj1.value;
+\\
+
+
+class Document implements Printable{
+	public void print() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the first value: ");
+		int num = sc.nextInt();
+		System.out.print("Enter the second value: ");
+		int num1 = sc.nextInt();
+		System.out.println("You entered: " + num + " and " + num1);
+
+\\
+
+
+package q11284;
+interface Car {
+	public String getName();
+	public int getMaxSpeed();
+	public default void applyBreak(){
+		System.out.println("Applying break on "+getMaxSpeed());
+	}
+	public static Car getFastestCar(Car car1,Car car2){
+		if(car1.getMaxSpeed()>=car2.getMaxSpeed()){
+			return car1;
+		}
+		return car2;
+	}
+}
+class BMW implements Car {
+	String name;
+	int bmwspeed;
+	BMW(String name,int bmwspeed){
+		this.name=name;
+		this.bmwspeed=bmwspeed;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	public int getMaxSpeed(){
+		return bmwspeed;
+	}
+	public void applyBreak(){
+		System.out.println("Applying break on "+getName());
+	}
+}
+class Audi implements Car {
+	String name;
+	int AudiSpeed;
+	Audi(String name,int speed){
+		this.name = name;
+		AudiSpeed = speed;
+	}
+	public String getName(){
+		return name;
+	}
+	public int getMaxSpeed(){
+		return AudiSpeed;
+	}
+	public void applyBreak(){
+		System.out.println("Applying break on "+getName());
+	}
+}
+public class MainApp {
+	public static void main(String args[]) {
+		int s = Integer.parseInt(args[1]);
+		int s2 = Integer.parseInt(args[3]);
+		Car car1 = new BMW(args[0],s);
+		Car car2 = new Audi(args[2],s2);
+		System.out.println("Fastest car is : "+Car.getFastestCar(car1,car2).getName());
+
+\\
+
+
+package q11286;
+public class Area {
+	public static void main(String args[]) {
+		FindArea area = new FindArea();
+		area.triangleArea(Double.parseDouble(args[0]), Double.parseDouble(args[1]));
+		area.rectangleArea(Double.parseDouble(args[0]), Double.parseDouble(args[1]));
+		area.squareArea(Double.parseDouble(args[0]));
+		area.circleArea(Double.parseDouble(args[1]));
+	}
+}
+abstract class calcArea {
+	abstract void triangleArea(double b, double h);
+	abstract void rectangleArea(double l, double b);
+	abstract void squareArea(double s);
+	abstract void circleArea(double r);
+}
+class FindArea extends calcArea {
+	void triangleArea(double b, double h)
+	{	
+		double area = (b*h)/2;
+		System.out.println("Area of triangle : "+area);	
+	}
+	void rectangleArea(double l, double b)
+	{
+		double area = l*b;
+		System.out.println("Area of rectangle : "+area);
+	}
+	void squareArea(double s)
+	{	
+		double area = s*s;	
+		System.out.println("Area of square : "+area);	
+	}
+	void circleArea(double r)
+	{	
+		double area = 3.14*r*r;	
+		System.out.println("Area of circle : "+area);
+
+
+\\
+
+
+package q11287;
+public class AbstractExample {
+	public static void main(String[] args) {
+		Shape s;
+		s = new Trapezoid();
+		s.numberofsides();
+		s = new Triangle();
+		s.numberofsides();
+		s = new Hexagon();
+		s.numberofsides();
+	}
+}
+abstract class Shape
+{	
+	abstract void numberofsides();
+}
+class Trapezoid extends Shape
+{
+	void numberofsides()
+	{
+		System.out.println("Number of sides in a trapezoid are 4");
+	}
+}
+class Triangle extends Shape
+{
+	void numberofsides()
+	{	
+		System.out.println("Number of sides in a triangle are 3");
+	}
+}
+class Hexagon extends Shape
+{
+	void numberofsides()
+	{
+		System.out.println("Number of sides in a hexagon are 6");
+
+\\
+
+
+// do it youself
+// do it youself package q35957;
+
+\\
+
+
+public interface Animal {
+	void makeSound();
+	default String eatFood() {
+		return "eating generic food";
+
+
+\\
+
+public class Dog implements Animal{
+	public void makeSound() {
+		System.out.println("Dog barks: Woof! Woof!");
+	}
+	public String eatFood() {
+		return "Dog is eating bones";
+
+\\

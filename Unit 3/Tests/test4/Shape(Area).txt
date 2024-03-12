@@ -1,0 +1,29 @@
+//dummytext
+class Shape {
+    public void calculateArea() {
+        System.out.println("Calculating area of Shape.");
+    }
+}
+class Square extends Shape {
+    @Override
+    public void calculateArea() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Side of the square: ");
+        double side = scanner.nextDouble();
+        double area = side * side;
+        System.out.printf("Area of Square: %.2f\n", area);
+    }
+}
+class Triangle extends Shape {
+    @Override
+    public void calculateArea() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Base of the triangle: ");
+        double base = scanner.nextDouble();
+        System.out.print("Height of the triangle: ");
+        double height = scanner.nextDouble();
+        double area = 0.5 * base * height;
+        System.out.printf("Area of Triangle: %.2f\n", area);
+
+
+\\

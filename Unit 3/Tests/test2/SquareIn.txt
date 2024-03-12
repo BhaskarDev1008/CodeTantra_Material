@@ -1,0 +1,13 @@
+class SquareIn {
+    int side;
+    void inputDimensions() {
+        Scanner scanner = new Scanner(System.in);
+        side = scanner.nextInt();
+    }
+}
+class AreaOut extends SquareIn {
+    void calculateArea() {
+        int area = side * side;
+        System.out.println("Area: " + area);
+
+\\

@@ -1,0 +1,17 @@
+// dummy text
+
+class Temperature {
+    float celsius;
+    float fahrenheit; 
+    public void inputTemperature() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter temperature in Celsius: ");
+        celsius = scanner.nextFloat();
+    }
+}
+class Conversion extends Temperature {
+    public void convertToFahrenheit() {
+        fahrenheit = (celsius * 9 / 5) + 32;
+        System.out.printf("Temperature in Fahrenheit: %.2f\n", fahrenheit);
+    
+\\

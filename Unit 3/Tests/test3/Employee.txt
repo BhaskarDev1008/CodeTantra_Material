@@ -1,0 +1,25 @@
+// dummytext
+class Employee {
+    String name;
+    int employeeId;
+    double salary;
+    public Employee(String name, int employeeId, double salary) {
+        this.name = name;
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+    public double calculateSalary() {
+        return salary;
+    }
+}
+class Manager extends Employee {
+    double bonus;
+    public Manager(String name, int employeeId, double salary, double bonus) {
+        super(name, employeeId, salary);
+        this.bonus = bonus;
+    }
+    @Override
+    public double calculateSalary() {
+        return super.calculateSalary() + bonus;
+
+\\

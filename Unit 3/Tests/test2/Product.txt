@@ -1,0 +1,17 @@
+class Product {
+    String productName;
+    double price;
+}
+class ProductInfo extends Product {
+    void inputProductDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("product name: ");
+        productName = scanner.nextLine();
+        System.out.print("price: $");
+        price = scanner.nextDouble();
+    }
+    void displayProductInfo() {
+        System.out.println("product name: " + productName);
+        System.out.println("price: $" + price);
+
+\\

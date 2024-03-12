@@ -1,0 +1,30 @@
+// dummytext
+// dummytext
+interface MathTransformer {
+    void transform(double number);
+}
+class SquareRootTransformer implements MathTransformer {
+    @Override
+    public void transform(double number) {
+        double squareRoot = Math.sqrt(number);
+        System.out.printf("Square root: %.2f\n", squareRoot);
+    }
+}
+class CubeRootTransformer implements MathTransformer {
+    @Override
+    public void transform(double number) {
+        double cubeRoot = Math.cbrt(number);
+        System.out.printf("Cube root: %.2f\n", cubeRoot);
+    }
+}
+public class SquareCubeRoot {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        double inputNumber = scanner.nextDouble();   
+        MathTransformer squareRootTransformer = new SquareRootTransformer();
+        squareRootTransformer.transform(inputNumber);     
+        MathTransformer cubeRootTransformer = new CubeRootTransformer();
+        cubeRootTransformer.transform(inputNumber);
+        scanner.close();
+

@@ -1,0 +1,28 @@
+class Employee {
+    String employeeName;
+    String designation;
+    int yearsOfExperience;
+}
+class EmployeeInfo extends Employee {
+    double salaryPerYear;
+    void inputEmployeeDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter employee name: ");
+        employeeName = scanner.nextLine();
+        System.out.print("Enter employee designation: ");
+        designation = scanner.nextLine();
+        System.out.print("Enter years of experience: ");
+        yearsOfExperience = scanner.nextInt();
+        System.out.print("Enter salary per year: $");
+        salaryPerYear = scanner.nextDouble();
+    }
+    void displayEmployeeInfo() {
+        System.out.println("Employee Name: " + employeeName);
+        System.out.println("Designation: " + designation);
+        System.out.println("Years of Experience: " + yearsOfExperience + " years");
+    }
+    void calculateSalary() {
+        double salary = yearsOfExperience * salaryPerYear;
+        System.out.println("Salary: $" + salary);
+
+\\

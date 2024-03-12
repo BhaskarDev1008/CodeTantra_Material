@@ -1,0 +1,35 @@
+// dummytext
+// dummytext
+interface ReverseString {
+    void reverseDisplay(String input);
+}
+class FirstHalf implements ReverseString {
+    @Override
+    public void reverseDisplay(String input) {
+        int length = input.length();
+        String firstHalf = input.substring(0, length / 2);
+        String reversedFirstHalf = new StringBuilder(firstHalf).reverse().toString();
+        System.out.println("Reversed First Half: " + reversedFirstHalf);
+    }
+}
+class SecondHalf implements ReverseString {
+    @Override
+    public void reverseDisplay(String input) {
+        int length = input.length();
+        String secondHalf = input.substring(length / 2);
+        String reversedSecondHalf = new StringBuilder(secondHalf).reverse().toString();
+        System.out.println("Reversed Second Half: " + reversedSecondHalf);
+    }
+}
+public class ReverseStringApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+        ReverseString firstHalfReverser = new FirstHalf();
+        ReverseString secondHalfReverser = new SecondHalf();
+        firstHalfReverser.reverseDisplay(inputString);
+        secondHalfReverser.reverseDisplay(inputString);
+        scanner.close();
+    }
+}

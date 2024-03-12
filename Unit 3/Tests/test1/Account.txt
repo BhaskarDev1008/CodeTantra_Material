@@ -1,0 +1,25 @@
+class Account {
+    String accountNumber;
+    double balance;
+    void inputDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter account number: ");
+        accountNumber = scanner.nextLine();
+    }
+    void displayBalance() {
+        System.out.println("Current balance: " + balance);
+    }
+}
+class Transaction extends Account {
+    double amount;
+    void inputAmount() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter transaction amount: ");
+        amount = scanner.nextDouble();
+    }
+    void performTransaction() {
+        balance += amount;
+        System.out.println("Transaction Successful!");
+        displayBalance();
+
+\\

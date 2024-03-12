@@ -1,0 +1,47 @@
+\\dummytext
+\\dummytext
+abstract class BankAccount {
+    protected double balance;
+    public void displayBalance() {
+        System.out.println("Current balance: " + balance);
+    }
+    abstract void deposit(double amount);
+    abstract void withdraw(double amount);
+}
+class SavingsAccount extends BankAccount {
+    public SavingsAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+    @Override
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount");
+        }
+    }
+    @Override
+    public void withdraw(double amount) {
+        if (amount > 0 && balance >= amount) {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        } else {
+            System.out.println("Invalid amount/Insufficient balance");
+        }
+    }
+    public static void main(String[] args) {
+        SavingsAccount savingsAccount = new SavingsAccount(1000.0);
+        savingsAccount.displayBalance();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("amount to deposit: ");
+        double depositAmount = scanner.nextDouble();
+        savingsAccount.deposit(depositAmount);
+        savingsAccount.displayBalance();
+        System.out.print("amount to withdraw: ");
+        double withdrawAmount = scanner.nextDouble();
+        savingsAccount.withdraw(withdrawAmount);
+        savingsAccount.displayBalance();    
+        scanner.close();
+
+\\

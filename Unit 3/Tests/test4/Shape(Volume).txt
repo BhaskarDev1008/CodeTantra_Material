@@ -1,0 +1,30 @@
+//dummytext
+class Shape {
+    public void calculateVolume() {
+        System.out.println("Calculating volume of Shape.");
+    }
+}
+class Cube extends Shape {
+    @Override
+    public void calculateVolume() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Side of the cube: ");
+        double side = scanner.nextDouble();
+        double volume = Math.pow(side, 3);
+        System.out.printf("Volume of Cube: %.2f\n", volume);
+    }
+}
+class Cuboid extends Shape {
+    @Override
+    public void calculateVolume() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Length of the cuboid: ");
+        double length = scanner.nextDouble();
+        System.out.print("Width of the cuboid: ");
+        double width = scanner.nextDouble();
+        System.out.print("Height of the cuboid: ");
+        double height = scanner.nextDouble();
+        double volume = length * width * height;
+        System.out.printf("Volume of Cuboid: %.2f\n", volume);
+
+\\

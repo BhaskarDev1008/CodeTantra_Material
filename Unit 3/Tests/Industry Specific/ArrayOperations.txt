@@ -1,0 +1,37 @@
+//dummytext
+//dummytext
+import java.util.*;
+public class ArrayOperations {
+    private int[] array;
+    public ArrayOperations(int[] array) {
+        this.array = array;
+    }
+    public void displayArray() {
+        System.out.println("Array: " + Arrays.toString(array));
+    }
+    public int findSum() {
+        int sum = 0;
+        for (int num : array) {
+            sum += num;
+        }
+        return sum;
+    }
+    public double findAverage() {
+        if (array.length == 0) {
+            return 0.0;
+        }
+        return (double) findSum() / array.length;
+    }
+    public int findMaximum() {
+        if (array.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+
+\\

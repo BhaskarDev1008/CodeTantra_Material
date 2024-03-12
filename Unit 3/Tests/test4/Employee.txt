@@ -1,0 +1,24 @@
+//dummytext
+class Employee {
+    public void introduce() {
+        System.out.println("Introducing an employee");
+    }
+}
+class Manager extends Employee {
+    @Override
+    public void introduce() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Department of manager: ");
+        String department = scanner.nextLine();
+        System.out.println("I am a manager in the " + department + " department");
+    }
+}
+class Intern extends Employee {
+    @Override
+    public void introduce() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Project of intern: ");
+        String project = scanner.nextLine();
+        System.out.println("I am an intern working on the " + project + " project");
+
+\\

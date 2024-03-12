@@ -1,0 +1,47 @@
+
+//dummytext
+//dummytext
+abstract class Shape {
+    abstract double calculateArea();
+    public void displayDetails() {
+        System.out.println("Shape details:");
+        System.out.println("Area: " + calculateArea());
+    }
+}
+class Triangle extends Shape {
+    double base;
+    double height;
+    @Override
+    double calculateArea() {
+        return 0.5 * base * height;
+    }
+    void inputDetails(Scanner scanner) {
+        System.out.print("Enter the base of the triangle: ");
+        base = scanner.nextDouble();
+        System.out.print("Enter the height of the triangle: ");
+        height = scanner.nextDouble();
+    }
+}
+class Square extends Shape {
+    double side;
+    @Override
+    double calculateArea() {
+        return side * side;
+    }
+    void inputDetails(Scanner scanner) {
+        System.out.print("Enter the side length of the square: ");
+        side = scanner.nextDouble();
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Triangle triangle = new Triangle();
+        triangle.inputDetails(scanner);
+        triangle.displayDetails();
+        Square square = new Square();
+        square.inputDetails(scanner);
+        square.displayDetails();
+        scanner.close();
+
+\\
