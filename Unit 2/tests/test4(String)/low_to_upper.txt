@@ -4,7 +4,7 @@ public class ToUpperCase{
     public static void main(String[] args) {
         Scanner scan =  new Scanner (System.in);
         String in = scan.nextLine();
-        String modified = in.ToUpperCase();
+        String modified = in.toUpperCase();
         System.out.println(modified);
     }
 }
